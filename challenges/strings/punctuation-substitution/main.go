@@ -42,9 +42,7 @@ func changeCharacters(text string) string {
 func main() {
 
 	text := "Yesterday was Saturday. Today is Sunday! and Tomorrow is Monday!!!"
-
 	resultText := changeCharacters(text)
-
 	fmt.Println(resultText)
 
 }
