@@ -5,6 +5,11 @@ import (
 	"math"
 )
 
+/*
+you will be tasked with implementing a function that will return either “odd” or “even” depending on
+whether or not a number has an odd or an even number of factors.
+*/
+
 func OddEvenFactors(num int) string {
 	factors := CheckFactors(num)
 	if len(factors)%2 == 0 {
