@@ -16,7 +16,8 @@ so the return value should be 5 (profit = 10 - 5 = 5).
 Here's your starting point:
 
 def buy_and_sell(arr):
-  #Fill this in.
+
+	#Fill this in.
 
 print buy_and_sell([9, 11, 8, 5, 7, 10])
 # 5
@@ -24,7 +25,7 @@ print buy_and_sell([9, 11, 8, 5, 7, 10])
 func main() {
 
 	//stocks := []int{9, 11, 8, 5, 7, 10}
-	stocks := []int{9, 11, 8, 5, 7, 12}
+	stocks := []int{9, 11, 8, 5, 7, 12, 11, 14}
 	profit := buyAndSell(stocks)
 
 	fmt.Printf("The biggest profit is: %d\n", profit)
@@ -45,7 +46,7 @@ func buyAndSell(stocks []int) int {
 
 	//Now I have the smallest price of the stock, I gonna find the biggest value of the day.
 	for i := 0; i < len(stocks); i++ {
-		if stocks[i] > smallestPrice {
+		if stocks[i] > smallestPrice && stocks[i] > biggestPrice {
 			biggestPrice = stocks[i]
 		}
 	}
