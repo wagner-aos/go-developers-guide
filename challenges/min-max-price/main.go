@@ -48,7 +48,7 @@ func main() {
 
 	//I gonna create a variable flights which is a slice of Flights.
 	var flights []Flight
-	//I gonna assing some flights here.
+	//I gonna assign some flights here, and I just going to set the prices, cause I only need it for comparision.
 	flights = []Flight{
 		{Price: 30},
 		{Price: 20},

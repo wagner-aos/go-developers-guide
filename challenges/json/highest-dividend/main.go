@@ -43,6 +43,11 @@ func HighestDividend(stocksJson string) (string, error) {
 	if err := json.Unmarshal([]byte(stocksJson), &stockSlice); err != nil {
 		panic(err)
 	}
+
+	if len(stockSlice) == 0 {
+		return "", nil
+	}
+
 	higuest := stockSlice[0]
 	//fmt.Println(stockSlice)
 	for _, s := range stockSlice {
@@ -58,10 +63,10 @@ func main() {
 	fmt.Println("Stock Price AI")
 
 	stocks_json := `[
-    {"ticker":"APPL","dividend":0.5},
-    {"ticker":"GOOG","dividend":0.2},
-    {"ticker":"MSFT","dividend":0.3}
-  ]`
+		{"ticker":"APPL","dividend":0.5},
+		{"ticker":"GOOG","dividend":0.2},
+		{"ticker":"MSFT","dividend":0.3}
+  	]`
 
 	highestDividend, _ := HighestDividend(stocks_json)
 	fmt.Println(highestDividend)
